@@ -21,7 +21,7 @@ const TravelDB = () => {
   if (error) return <Error />;
   if (!data) return null;
   return (
-    <section className="my-5 h-[550px] overflow-hidden">
+    <section className="my-5 h-[550px] overflow-hidden relative">
       <h3 className="text-3xl font-bold bg-white w-max mx-auto rounded-t-md border-x border-t translate-y-[1px] border-neutral-300 px-2 py-1">Rejsemål</h3>
       <div className="border border-neutral-300 rounded-md bg-white shadow-md mb-5 p-3">
         {data.map((title: any) => (
@@ -68,6 +68,7 @@ const TravelDB = () => {
           </HoverEditer>
         </div>
       ))}
+      <button className="absolute bottom-0 w-full bg-gradient-to-t from-neutral-200 via-neutral-200/50 to-transparent pt-5">Læs mere</button>
     </section>
   );
 };
