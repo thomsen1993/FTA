@@ -2,8 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: sans-serif;
+  @apply bg-neutral-100
+}
+
+ul {
+  @apply list-disc list-inside mt-2 ml-2
+}
+
+h2 {
+  @apply bg-neutral-600 text-neutral-200 text-center text-3xl rounded-md py-1
+}
+
 @layer components {
   .wrapper {
     @apply max-w-[950px] mx-auto
+  }
+}
+
+.infoDown {
+  animation: infoDown .7s ease-in-out;
+}
+
+@keyframes infoDown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    }
+    80% {
+      transform: translateY(5px);
+    }
+    90% {
+      transform: translateY(2px);
+    }
+    100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
